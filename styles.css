@@ -1,0 +1,27 @@
+body {
+    height: 100vh;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.choicesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    /* border: 2px solid red; */
+}

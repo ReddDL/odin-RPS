@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection){
         }
     } else if (playerSelection == "SCISSORS"){
         if (computerSelection == "PAPER"){
-            return winStatement;s
+            return winStatement;
         } else if (computerSelection == "ROCK"){
             return loseStatement;
         }
@@ -34,19 +34,20 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function game(){
-    for (i = 0; i < 5; i++){
-        let playerSelection = prompt("Enter your choice (Rock, Paper, Scissors): ");
-        const computerSelection = getComputerChoice();
-
-        if (playerSelection == null){
-            alert("Enter a valid choice");
-            continue;
-        }
-        console.log(playRound(playerSelection, computerSelection));
-    }
+function game(playerSelection){
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
 }
 
+const rockBtn = document.getElementById("rockBtn");
+const paperBtn = document.getElementById("paperBtn");
+const scissorsBtn = document.getElementById("scissorsBtn");
+let playerSelection;
 
-game();
+rockBtn.addEventListener('click', () => game("ROCK"));
+paperBtn.addEventListener('click', () => game("PAPER"));
+scissorsBtn.addEventListener('click', () => game("SCISSORS"));
+
+
+
 
