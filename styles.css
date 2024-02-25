@@ -8,10 +8,33 @@ header {
     display: flex;
     justify-content: center;
 }
+
+/* Game output */
+.game-output{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Computer choice */
+.computer-choice {
+    height: 80px;
+    width: 80px;
+    /* border: 2px solid red; */
+}
+
+/* Scoreboard */
+.scoreboard{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* User choices */
 .choice-button{
     padding: 0;
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     padding: 5px;
     border: none;
     background-color: white;
