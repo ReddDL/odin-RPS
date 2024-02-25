@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --water-color: #40C4FF;
+    --fire-color: #FF5656;
+    --grass-color: #81FF61;
+}
+
+.macondo{
+    font-family: "Macondo Swash Caps";
+}
+
+.title{
+    font-size: 4em;
+}
+
+.blue-color {
+    color: var(--water-color);
+}
+.red-color{
+    color: var(--fire-color);
+}
+
+.green-color{
+    color: var(--grass-color);
+}
 header {
     display: flex;
     gap: 16px;
@@ -58,16 +84,16 @@ header {
 }
 .water-icon:hover{
 
-    fill: blue;
+    fill: var(--water-color);
 }
 
 .fire-icon:hover{
-    fill: red;
+    fill: var(--fire-color);
 }
 
 .grass-icon:hover{
 
-    fill: green;
+    fill: var(--grass-color);
 }
 
 
