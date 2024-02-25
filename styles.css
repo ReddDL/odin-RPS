@@ -4,6 +4,25 @@
     --water-color: #40C4FF;
     --fire-color: #FF5656;
     --grass-color: #81FF61;
+    --gray: #5E5E5E;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+p {
+    margin: 0;
 }
 
 .macondo{
@@ -26,13 +45,12 @@
 }
 header {
     display: flex;
-    gap: 16px;
+    gap: 1em;
     justify-content: center;
 }
 
 .explanation {
-    display: flex;
-    justify-content: center;
+    font-size: 1.5em;
 }
 
 /* Game output */
@@ -40,17 +58,19 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-size: 1.5em;;
 }
 
 /* Computer choice */
 .computer-choice {
-    height: 80px;
-    width: 80px;
+    height: 8rem;
+    width: 8rem;
     /* border: 2px solid red; */
 }
 
 /* Scoreboard */
 .scoreboard{
+    font-size: 1.5em;
     display: flex;
     gap: 16px;
     justify-content: center;
@@ -58,29 +78,28 @@ header {
 
 /* User choices */
 .choice-button{
-    padding: 0;
-    height: 80px;
-    width: 80px;
-    padding: 5px;
+    height: 8rem;
+    width: 8rem;
     border: none;
     background-color: white;
-    transform: scale(1.1);
-    /* border: 2px solid red; */
+
     cursor: pointer;
 
 }
 
 .choices-container{
     display: flex;
-    gap: 16px;
+    gap: 4em;
     justify-content: center;
+    border: 2px solid var(--gray);
+    padding: 2em 4em;
 
 }
  
 .choice-icon{
     max-height: 100%;
     max-width: 100%;
-    fill: #5E5E5E;
+    fill: var(--gray);
 }
 .water-icon:hover{
 
