@@ -28,24 +28,23 @@ header {
 
 }
  
-.water-icon:hover{
+.choice-icon{
     max-height: 100%;
     max-width: 100%;
-    fill: blue !important;
+    fill: #5E5E5E;
+}
+.water-icon:hover{
+
+    fill: blue;
 }
 
 .fire-icon:hover{
-    max-height: 100%;
-    max-width: 100%;
-    fill: red !important;
-    /* border: 2px solid blue; */
+    fill: red;
 }
 
 .grass-icon:hover{
-    max-height: 100%;
-    max-width: 100%;
+
     fill: green;
-    /* border: 2px solid blue; */
 }
 
 
