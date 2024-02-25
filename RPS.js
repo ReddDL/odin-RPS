@@ -1,5 +1,5 @@
 function getComputerChoice(){
-    let choices = ["ROCK", "PAPER", "SCISSORS"];
+    let choices = ["WATER", "FIRE", "GRASS"];
     return choices[Math.floor(Math.random() * 3)];
 }
 
@@ -13,40 +13,40 @@ function playRound(playerSelection, computerSelection){
 
     if (playerSelection == computerSelection){
         return tieStatement;
-    } else if (playerSelection == "ROCK"){
-        if (computerSelection == "SCISSORS"){
+    } else if (playerSelection == "WATER"){
+        if (computerSelection == "FIRE"){
             return winStatement;
-        } else if (computerSelection == "PAPER"){
+        } else if (computerSelection == "GRASS"){
             return loseStatement;
         }
-    } else if (playerSelection == "SCISSORS"){
-        if (computerSelection == "PAPER"){
+    } else if (playerSelection == "FIRE"){
+        if (computerSelection == "GRASS"){
             return winStatement;
-        } else if (computerSelection == "ROCK"){
+        } else if (computerSelection == "WATER"){
             return loseStatement;
         }
-    } else if (playerSelection == "PAPER"){
-        if (computerSelection == "ROCK"){
+    } else if (playerSelection == "GRASS"){
+        if (computerSelection == "WATER"){
             return winStatement;
-        } else if (computerSelection == "SCISSORS"){
+        } else if (computerSelection == "FIRE"){
             return loseStatement;
         }
     }
 }
 
 function game(playerSelection){
-    const computerSelection = getComputerChoice();
+    var computerSelection = getComputerChoice();
     console.log(playRound(playerSelection, computerSelection));
 }
 
-const rockBtn = document.getElementById("rockBtn");
-const paperBtn = document.getElementById("paperBtn");
-const scissorsBtn = document.getElementById("scissorsBtn");
+const waterBtn = document.getElementById("waterBtn");
+const fireBtn = document.getElementById("fireBtn");
+const grassBtn = document.getElementById("grassBtn");
 let playerSelection;
 
-rockBtn.addEventListener('click', () => game("ROCK"));
-paperBtn.addEventListener('click', () => game("PAPER"));
-scissorsBtn.addEventListener('click', () => game("SCISSORS"));
+waterBtn.addEventListener('click', () => game("WATER"));
+fireBtn.addEventListener('click', () => game("FIRE"));
+grassBtn.addEventListener('click', () => game("GRASS"));
 
 
 
