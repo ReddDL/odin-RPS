@@ -1,4 +1,7 @@
-Simulate rock paper scissors using javascript without implementing a GUI yet
+ELEMENTAL GAME
 
-# odin-RPS
-Use basic javascript to create a rock paper scissors game using the console
+Water beats Fire | Fire beats Grass | Grass beats Water
+
+Choose your weapon in hopes of defeating your enemy. 
+
+TODO: Fix tie outcome
