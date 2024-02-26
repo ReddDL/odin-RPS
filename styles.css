@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --water-color: #38609C;
+    --fire-color: #C44646;
+    --grass-color: #369C4B;
+    --gray: #5E5E5E;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+p {
+    margin: 0;
+}
+
+.macondo{
+    font-family: "Macondo Swash Caps";
+}
+
+.title{
+    font-size: 4em;
+}
+
+.blue-color {
+    color: var(--water-color);
+    fill: var(--water-color) !important;
+}
+.red-color{
+    color: var(--fire-color);
+    fill: var(--fire-color) !important;
+}
+
+.green-color{
+    color: var(--grass-color);
+    fill: var(--grass-color) !important;
+}
+header {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.explanation {
+    font-size: 1.5em;
+}
+
+/* Game output */
+.game-output{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5em;;
+}
+
+/* Computer choice */
+div#computer-choice-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 8rem;
+    width: 8rem;
+    /* border: 2px solid red; */
+}
+
+svg.computer-choice {
+    /* max-width: 100%; */
+    max-height: 100%;
+}
+/* Scoreboard */
+.scoreboard{
+    font-size: 1.5em;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* User choices */
+.choice-button{
+    height: 8rem;
+    width: 8rem;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.choices-container{
+    display: flex;
+    gap: 4em;
+    justify-content: center;
+    border: 2px solid var(--gray);
+    padding: 2em 4em;
+
+}
+ 
+.choice-icon{
+    max-height: 100%;
+    max-width: 100%;
+    fill: var(--gray);
+}
+
+.choice-icon:hover{
+    transform: scale(1.1);
+}
+
+.water-icon:hover{
+    fill: var(--water-color) !important;
+}
+
+.fire-icon:hover{
+    fill: var(--fire-color) !important;
+}
+
+.grass-icon:hover{
+    fill: var(--grass-color) !important;
+}
