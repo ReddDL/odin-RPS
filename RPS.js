@@ -18,10 +18,6 @@ function playRound(playerSelection, computerSelection){
     var fireIcon = document.querySelector('#fire-icon');
     var grassIcon = document.querySelector('#grass-icon');
 
-    // waterIcon.style.fill = 'var(--gray)';
-    // fireIcon.style.fill = 'var(--gray)';
-    // grassIcon.style.fill = 'var(--gray)';
-
     if (playerSelection == computerSelection){
         scoreboard('tie', playerSelection, computerSelection)
         return tieStatement;
