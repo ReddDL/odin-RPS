@@ -18,37 +18,43 @@ function playRound(playerSelection, computerSelection){
         return tieStatement;
     } else if (playerSelection == "WATER"){
         if (computerSelection == "FIRE"){
-            scoreboard('win');
+            scoreboard('win', 'water', 'fire');
             return winStatement;
         } else if (computerSelection == "GRASS"){
-            scoreboard('lose')
+            scoreboard('lose', 'water', 'grass')
             return loseStatement;
         }
     } else if (playerSelection == "FIRE"){
         if (computerSelection == "GRASS"){
-            scoreboard('win')
+            scoreboard('win', 'fire', 'grass')
             return winStatement;
         } else if (computerSelection == "WATER"){
-            scoreboard('lose')
+            scoreboard('lose', 'fire', 'water')
             return loseStatement;
         }
     } else if (playerSelection == "GRASS"){
         if (computerSelection == "WATER"){
-            scoreboard('win')
+            scoreboard('win', 'grass', 'water')
             return winStatement;
         } else if (computerSelection == "FIRE"){
-            scoreboard('lose')
+            scoreboard('lose', 'grass', 'fire')
             return loseStatement;
         }
     }
 }
 
-function scoreboard(outcome){
+function scoreboard(outcome, userChoice, computerChoice){
     var scoreText = document.querySelector('.score');
+    var outcomeText = document.querySelector('.outcome-indicator')
+
     if (outcome == 'win'){
+        outcomeText.innerText = `You did it! Your ${userChoice} has overpowered the enemy's ${computerChoice}!`
         playerScore++;
     } else if (outcome == 'lose'){
+        outcomeText.innerText = `Unfortunate! Your ${userChoice} was no match for the enemy's ${computerChoice}!`
         computerScore++;
+    } else {
+        outcomeText.innerText = `Interesting! It was a draw!`;
     }
     scoreText.innerText = `Your score: ${playerScore} | Enemy's score: ${computerScore}`;
 }
