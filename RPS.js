@@ -14,7 +14,12 @@ function playRound(playerSelection, computerSelection){
     const loseStatement = "You lost! " + computerSelection + " beats " + playerSelection;
     const tieStatement = "It's a tie! You both selected " + playerSelection
 
+    var waterIcon = document.getElementById('#water-icon');
+    var fireIcon = document.querySelector('#fire-icon');
+    var grassIcon = document.querySelector('#grass-icon');
+
     if (playerSelection == computerSelection){
+        scoreboard('tie', playerSelection, computerSelection)
         return tieStatement;
     } else if (playerSelection == "WATER"){
         if (computerSelection == "FIRE"){
@@ -24,6 +29,7 @@ function playRound(playerSelection, computerSelection){
             scoreboard('lose', 'water', 'grass')
             return loseStatement;
         }
+        waterIcon.style.fill('var(--water-color)')
     } else if (playerSelection == "FIRE"){
         if (computerSelection == "GRASS"){
             scoreboard('win', 'fire', 'grass')
@@ -53,7 +59,7 @@ function scoreboard(outcome, userChoice, computerChoice){
     } else if (outcome == 'lose'){
         outcomeText.innerText = `Unfortunate! Your ${userChoice} was no match for the enemy's ${computerChoice}!`
         computerScore++;
-    } else {
+    } else if (outcome == 'tie') {
         outcomeText.innerText = `Interesting! It was a draw!`;
     }
     scoreText.innerText = `Your score: ${playerScore} | Enemy's score: ${computerScore}`;
