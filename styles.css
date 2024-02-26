@@ -112,17 +112,19 @@ svg.computer-choice {
     max-width: 100%;
     fill: var(--gray);
 }
+
+.choice-icon:hover{
+    transform: scale(1.1);
+}
+
 .water-icon:hover{
-    fill: var(--water-color);
+    fill: var(--water-color) !important;
 }
 
 .fire-icon:hover{
-    fill: var(--fire-color);
+    fill: var(--fire-color) !important;
 }
 
 .grass-icon:hover{
-
-    fill: var(--grass-color);
+    fill: var(--grass-color) !important;
 }
-
-
