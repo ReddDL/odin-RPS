@@ -14,14 +14,21 @@ function playRound(playerSelection, computerSelection){
     const loseStatement = "You lost! " + computerSelection + " beats " + playerSelection;
     const tieStatement = "It's a tie! You both selected " + playerSelection
 
-    var waterIcon = document.getElementById('#water-icon');
+    const waterIcon = document.getElementById('water-icon');
     var fireIcon = document.querySelector('#fire-icon');
     var grassIcon = document.querySelector('#grass-icon');
+
+    // waterIcon.style.fill = 'var(--gray)';
+    // fireIcon.style.fill = 'var(--gray)';
+    // grassIcon.style.fill = 'var(--gray)';
 
     if (playerSelection == computerSelection){
         scoreboard('tie', playerSelection, computerSelection)
         return tieStatement;
     } else if (playerSelection == "WATER"){
+        waterIcon.style.fill = 'var(--water-color)';
+        fireIcon.style.fill = 'var(--gray)';
+        grassIcon.style.fill = 'var(--gray)'; 
         if (computerSelection == "FIRE"){
             scoreboard('win', 'water', 'fire');
             return winStatement;
@@ -29,8 +36,10 @@ function playRound(playerSelection, computerSelection){
             scoreboard('lose', 'water', 'grass')
             return loseStatement;
         }
-        waterIcon.style.fill('var(--water-color)')
     } else if (playerSelection == "FIRE"){
+        fireIcon.style.fill = 'var(--fire-color)';
+        waterIcon.style.fill = 'var(--gray)';
+        grassIcon.style.fill = 'var(--gray)'; 
         if (computerSelection == "GRASS"){
             scoreboard('win', 'fire', 'grass')
             return winStatement;
@@ -39,6 +48,9 @@ function playRound(playerSelection, computerSelection){
             return loseStatement;
         }
     } else if (playerSelection == "GRASS"){
+        grassIcon.style.fill = 'var(--grass-color)';
+        waterIcon.style.fill = 'var(--gray)';
+        fireIcon.style.fill = 'var(--gray)'; 
         if (computerSelection == "WATER"){
             scoreboard('win', 'grass', 'water')
             return winStatement;
