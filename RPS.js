@@ -1,3 +1,6 @@
+var playerScore = 0;
+var computerScore = 0;
+
 function getComputerChoice(){
     let choices = ["WATER", "FIRE", "GRASS"];
     return choices[Math.floor(Math.random() * 3)];
@@ -15,23 +18,39 @@ function playRound(playerSelection, computerSelection){
         return tieStatement;
     } else if (playerSelection == "WATER"){
         if (computerSelection == "FIRE"){
+            scoreboard('win');
             return winStatement;
         } else if (computerSelection == "GRASS"){
+            scoreboard('lose')
             return loseStatement;
         }
     } else if (playerSelection == "FIRE"){
         if (computerSelection == "GRASS"){
+            scoreboard('win')
             return winStatement;
         } else if (computerSelection == "WATER"){
+            scoreboard('lose')
             return loseStatement;
         }
     } else if (playerSelection == "GRASS"){
         if (computerSelection == "WATER"){
+            scoreboard('win')
             return winStatement;
         } else if (computerSelection == "FIRE"){
+            scoreboard('lose')
             return loseStatement;
         }
     }
+}
+
+function scoreboard(outcome){
+    var scoreText = document.querySelector('.score');
+    if (outcome == 'win'){
+        playerScore++;
+    } else if (outcome == 'lose'){
+        computerScore++;
+    }
+    scoreText.innerText = `Your score: ${playerScore} | Enemy's score: ${computerScore}`;
 }
 
 function game(playerSelection){
